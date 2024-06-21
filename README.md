@@ -384,6 +384,9 @@ src/
   * refactor: 코드 리팩토링
   * test: 테스트 코드, 리팩토링 테스트 코드 추가
   * chore: 빌드 업무 수정, 패키지 매니저 수정
+  * perf: 성능 개선
+  * WIP(Work In Progress): 작업 중
+
 
     ```text
     [feat]: 로그인 페이지 추가
@@ -393,6 +396,8 @@ src/
     [refactor]: 로그인 페이지 컴포넌트 리팩토링
     [test]: 로그인 페이지 테스트 코드 추가
     [chore]: package.json 업데이트
+    [perf] 로그인 로직 성능 개선
+    [WIP] 로그인 로직 작업 중 @REVIEW 
     ```
 </div>
 </details>
