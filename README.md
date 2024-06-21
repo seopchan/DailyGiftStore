@@ -1,23 +1,51 @@
 # Daily Gift Store
 
----
 ## 프로젝트 소개
-- 목적: 매일매일 선물을 줄 수 있는 스토어 서비스
+- **Daily Gift Store**: 매일 새로운 선물을 만나보세요
+- 사용자가 다양한 상품을 검색, 필터링, 상세 조회하고, 장바구니에 추가하여 주문 및 결제할 수 있으며, 판매자는 상품 및 주문을 효율적으로 관리할 수 있는 기능을 제공
 - 기간: 2024.06.19 ~ 진행 중
 - 인원: 1명
 - [프로젝트 기록](https://devseopchan.notion.site/018fb2252bfd4e43b29f7b1cc03a602b)
 
-## 기술 스택, 툴
-- 언어: TypeScript
-- UI 프레임워크: React
-- 빌드 툴: Vite
-- UI: Tailwind CSS, shadcn/ui
-- 상태관리: React Context API, react Query
-- DB: Firebase
-- 기타: Tailwind CSS, React hook form
-- other tools: Github, SourceTree
+## 프로젝트 목표
+1. 사용자 목표:
+   - 월간 활성 사용자(MAU) 100,000명 달성: 매일 새로운 선물 추천으로 높은 사용자 참여도와 재방문율 유지
+   - 연간 사용자 만족도 90% 이상 유지: 사용자 피드백을 반영하여 지속적으로 서비스 품질 개선
+2. 상품 목표:
+   - 연간 1,000만 건의 상품 데이터 수집: 다양한 선물 옵션을 제공하기 위해 대규모 상품 데이터를 수집하고 관리
+   - 매일 100개 이상의 새로운 상품 등록: 매일 다양한 카테고리의 새로운 선물을 추가하여 사용자에게 신선한 경험 제공
+3. 판매 목표:
+   - 월간 매출 1억 원 달성: 적극적인 마케팅과 프로모션을 통해 매출 성장 촉진
+   - 평균 주문 가치(AOV) 20% 증가: 번들 판매, 추천 상품 등 전략을 통해 주문 당 평균 매출 증가
+4. 기술 목표:
+   - 100% 시스템 가동 시간(업타임) 유지: 안정적인 서비스 제공을 위해 서버와 인프라를 지속적으로 모니터링하고 유지보수
+   - 페이지 로드 시간 3초 이하 유지: 사용자 경험을 개선하기 위해 웹사이트 최적화와 빠른 로드 시간을 보장
+5. 마케팅 목표:
+   - 연간 소셜 미디어 팔로워 50,000명 달성: 소셜 미디어를 통해 브랜드 인지도를 높이고 사용자 참여 유도
+   - 월간 뉴스레터 구독자 20,000명 확보: 이메일 마케팅을 통해 사용자와 지속적으로 소통하고 신규 상품과 프로모션 홍보
 
----
+## 주요 기능
+1. 유저 관리
+   - 회원가입 및 로그인: 사용자가 이메일 및 소셜 계정을 통해 회원가입 및 로그인
+   - 회원 정보 관리: 사용자가 자신의 프로필, 결제 정보, 배송 주소 등을 관리
+2. 상품 판매
+   - 상품 등록: 판매자가 상품의 이미지, 이름, 가격, 재고 등을 등록 및 관리
+   - 상품 검색 및 필터링: 사용자가 키워드, 카테고리, 가격, 평점 등의 기준으로 상품을 검색하고 필터링
+   - 상품 상세 보기: 상품의 상세 정보를 확인하고, 수량 선택 및 장바구니에 추가
+   - 장바구니 관리: 사용자가 선택한 상품을 장바구니에 추가, 수정, 삭제할 수 있으며, 총 가격을 확인
+   - 주문 및 결제: 사용자가 장바구니의 상품을 주문하고 다양한 결제 방법을 통해 결제
+3. 고객 지원
+   - 문의 및 고객 지원: 사용자가 문의를 남기고, 고객 지원팀과 소통
+   - 주문 내역 조회: 사용자가 이전에 주문한 내역을 조회하고, 주문 상태를 확인
+
+## 기술 스택, 툴
+- 개발 환경: macOS Monterey
+- 에디터: WebStorm
+- Frontend: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, React hook form
+- 상태관리: React Context API, react Query
+- 백엔드 / DB : Firebase
+- other tools: Github, SourceTree, Visily
+
 ## 기술 스택 선택 이유
 ### TypeScript 선정 이유
 * **사용 경험**: 이미 사용해본 언어로 러닝커브가 낮음
@@ -138,6 +166,14 @@ SPA (Single Page Application) 및 Web-App 개발에 사용
 </div>
 </details>
 
+### SWC 선정 이유
+* SWC
+  * JavaScript, TypeScript 트랜스파일러, Rust로 작성
+  * Babel의 대안
+* 장점
+  * 빠른 속도: 단일 스레드에서는 **Babel보다 20배** 빠르고, 4개 코어에서는 70배 빠름
+    * Rust는 어떤 메모리 리소스가 더 이상 필요하지 않고 지속적으로 실행될 필요가 없는지를 컴파일 타임에 결정, 처리 시간이 줄고 성능 향상
+
 ### Tailwind CSS 선정 이유
 * **정적 CSS 클래스**: 이전에 styled-components(CSS-in-JS)를 사용했는데, 런타임에 JavaScript를 실행해야 해 성능 저하가 있었음
   * tailwind css는 정적 CSS 클래스를 사용해 성능 저하가 없음
@@ -184,8 +220,6 @@ SPA (Single Page Application) 및 Web-App 개발에 사용
 * **의존성 최소화**: 별도의 패키지 설치 없이 필요한 컴포넌트만 선택해서 사용 가능
   * 앱의 크기를 줄이고 관리 용이
 * **빠른 통합과 사용**: npm과 같은 패키지 매니저를 사용하지 않아, 필요한 컴포넌트를 찾아 바로 사용 가능
-* 
-
 
 
 ### React Context API 선정 이유
@@ -215,19 +249,131 @@ SPA (Single Page Application) 및 Web-App 개발에 사용
 
 ### Firebase 선정 이유
 * MSW(Mock Service Worker)방식도 있음, MSW도 백엔드를 모킹해서 사용하기 때문에 좋은 방법
-* Firebase를 사용해 실제 백엔드를 일부 구축해 사용해보고 싶어서 선택
+* 실제 백엔드를 일부 구축해 사용해보고 싶어서 선택
+* 사용자 인증, DB, 스토리지 등 다양한 기능을 하나의 플랫폼에서 제공해 개발 생산성 향상 
+* Firebase Authentication
+  * 소셜 로그인, 이메일/비밀번호 로그인, 익명 로그인 등 다양한 로그인 방식 지원
+  * 사용자 인증, 권한 관리, 비밀번호 재설정 등 기능 제공
+  * Firebase Realtime Database, Firestore와 연동하여 사용자 데이터 관리
 
----
-## 코드 컨벤션
-### 코드 스타일
+### Firestore 선정 이유
+* Firebase Realtime Database와 Firestore 중 Firestore 선택
+  * Firestore: 쿼리, 인덱싱, 트랜잭션, 보안 규칙 등 다양한 기능 제공
+  * Realtime Database: 실시간 데이터 동기화, 실시간 업데이트, 실시간 이벤트 처리
+1. DB의 역할
+   - [ ] 데이터 동기화 
+   - [X] **고급 쿼리, 정렬 트랜잭션**
+   - 쇼핑몰은 복잡한 쿼리와 정렬, 그리고 트랜잭션을 필요
+   - 다양한 필터 옵션으로 상품을 검색하거나 정렬하고, 사용자가 주문을 완료할 때는 여러 데이터베이스 조작을 하나의 트랜잭션으로 처리해야 함
+   - 이러한 기능은 고급 쿼리와 트랜잭션을 지원하는 데이터베이스에서 원활하게 수행할 수 있음
+2. 데이터 작업 
+   - [ ] 수 GB 이하의 데이터가 자주 변경
+   - [X] **수백 GB 내지 TB의 데이터가 변경, 훨씬 더 높은 빈도로 읽힘**
+   - 쇼핑몰은 많은 상품 데이터와 사용자 데이터를 처리해야 함
+   - 또한, 이러한 데이터는 자주 업데이트되며, 사용자들이 빈번하게 상품을 검색하고 조회함
+   - 따라서 대량의 데이터를 효과적으로 처리할 수 있는 데이터베이스가 필요
+3. 데이터 모델
+   - [ ] 간단한 JSON 트리
+   - [X] 컬렉션으로 정리된 문서
+   - 쇼핑몰의 데이터는 제품 정보, 사용자 정보, 주문 정보 등 여러 형태의 데이터로 구성
+   - 이러한 데이터는 문서 지향 데이터베이스에서 관리하기 적합하며, 컬렉션으로 정리된 문서 형태로 저장하는 것이 유리
+   - 이는 데이터의 유연성을 높이고, 다양한 구조의 데이터를 손쉽게 관리할 수 있게 함
+4. 가용성
+   - [X] **99.999%의 매우 높은 업타임을 보장**
+   - [ ] **99.95% 이상의 업타임을 보장**
+   - 쇼핑몰 서비스는 24시간 내내 사용 가능해야 하며, 사용자들이 언제든지 상품을 검색하고 주문할 수 있어야 함
+   - 이는 특히 쇼핑몰의 매출과 신뢰도에 직접적인 영향을 미침
+   - 따라서 높은 가용성을 보장하는 데이터베이스가 필요
+5. 로컬 데이터에 대한 오프라인 쿼리
+   - [ ] **오프라인 쿼리 빈도가 높음**
+   - [X] **오프라인 쿼리가 거의 또는 전혀 없음**
+   - 쇼핑몰은 대부분 온라인 환경에서 운영
+   - 사용자가 상품을 검색하고 주문하는 과정은 항상 네트워크 연결을 필요
+   - 따라서 로컬 데이터에 대한 오프라인 쿼리 기능은 거의 필요하지 않음
+   - 이로 인해 오프라인 쿼리 기능이 중요한 고려사항은 아님
+
+## 파일 구조
+```text
+src/
+├── assets/                  # 이미지, 폰트, 기타 정적 자원
+│   ├── images/
+│   └── fonts/
+├── components/              # 재사용 가능한 컴포넌트
+|   ├── authentication/      # 인증 관련 컴포넌트
+│   ├── ui/                  # Atomic 컴포넌트 (원자적 디자인)
+│   ├── composite/           # Composite 컴포넌트 (조합형 컴포넌트)
+├── contexts/                # React Contexts (전역 상태 관리)
+├── hooks/                   # 커스텀 훅 (데이터 페칭, 상태 관리 등)
+├── layouts/                 # 페이지 레이아웃
+├── lib/                     # 라이브러리 및 유틸리티 함수
+|   ├── utils.ts             # 유틸리티 함수 (헬퍼, 검증 등)
+├── modals/                  # 모달 컴포넌트 (다이얼로그, 경고창 등)
+├── pages/                   # 각 페이지 컴포넌트
+├── services/                # API 호출 및 비즈니스 로직 처리
+├── styles/                  # 전역 스타일 및 CSS 변수
+├── App.tsx                  # 앱 진입점 및 라우트 구성
+├── main.tsx                 # 애플리케이션 루트 파일
+├── routes.tsx               # 라우트 설정
+```
+<details>
+<summary>적용 디자인 패턴</summary>
+<div markdown="1">
+
+### 1. **Atomic Design (원자적 디자인)**
+
+- **components/ui** 디렉토리에는 재사용 가능한 작은 단위의 컴포넌트(Atomic 컴포넌트)를 배치합니다. 이들은 Button, Input, Checkbox 등 작은 단위의 컴포넌트들로 구성되어 있습니다.
+- **components/composite** 디렉토리에는 여러 Atomic 컴포넌트를 조합하여 만든 Composite 컴포넌트를 배치합니다. Header, Footer, SignupForm 등이 이에 해당합니다.
+
+### 2. **Feature-Based Structure (기능 기반 구조)**
+
+- **contexts**, **hooks**, **modals**, **pages**, **services** 디렉토리는 특정 기능이나 목적에 따라 구성된 폴더 구조입니다. 이는 각각의 기능이나 서비스가 독립적으로 관리되고 확장될 수 있도록 합니다.
+- **pages** 디렉토리에는 각 페이지의 컴포넌트를 배치하여, 페이지 단위로 기능을 관리합니다.
+
+### 3. **Separation of Concerns (관심사 분리)**
+
+- **contexts**: 전역 상태 관리
+- **hooks**: 커스텀 훅
+- **layouts**: 페이지 레이아웃
+- **modals**: 모달 컴포넌트
+- **services**: API 호출 및 비즈니스 로직
+- **styles**: 전역 스타일
+- **utils**: 유틸리티 함수
+
+### 4. **Presentation and Container Pattern (프레젠테이션과 컨테이너 패턴)**
+
+- **components/ui** 및 **components/composite** 디렉토리는 주로 프레젠테이션 로직을 포함합니다.
+- **contexts**, **hooks** 디렉토리의 파일들은 주로 데이터 로직과 상태 관리를 담당하여 프레젠테이션 컴포넌트와 비즈니스 로직을 분리합니다.
+
+### 5. **Module Pattern (모듈 패턴)**
+
+- **services** 디렉토리는 API 호출과 같은 비즈니스 로직을 모듈화하여 관리합니다.
+- 각 페이지와 기능은 **pages** 디렉토리 내의 개별 파일로 모듈화되어 있습니다.
+
+### 정리:
+
+이 구조는 각 패턴의 장점을 활용하여 유지보수성과 확장성을 높입니다. Atomic Design 패턴은 컴포넌트 재사용성을 극대화하고, Feature-Based Structure는 특정 기능의 독립성을 보장하며, Separation of Concerns는 각 역할을 명확히 구분합니다. Presentation and Container Pattern은 UI와 비즈니스 로직을 분리하여 코드의 가독성을 높이고, Module Pattern은 비즈니스 로직을 모듈화하여 코드의 관리와 테스트를 용이하게 합니다.
+</div>
+</details>
+
+
+
+## 컨벤션
+<details>
+<summary>코드 컨벤션</summary>
+<div markdown="1">
+
 * **네이밍 컨벤션**: camelCase
 * **타입 정의**: TypeScript 사용
 * **폴더 구조**: 컴포넌트, 페이지, 훅, 유틸리티 등 기능별로 폴더 구분
 * **폴더명**: 소문자, 띄어쓰기 대신 하이픈(-) 사용
 * **파일명**: PascalCase, 파일명은 컴포넌트명과 동일하게 작성
 * **상수**: 상수명은 대문자, 띄어쓰기 대신 언더바(_) 사용
+</div>
+</details>
 
----
+<details>
+<summary>커밋 컨벤션</summary>
+<div markdown="1">
 
 ### 커밋 컨벤션
 * **커밋 메시지 형식**: `[<타입>]: <제목>`
@@ -239,14 +385,82 @@ SPA (Single Page Application) 및 Web-App 개발에 사용
   * test: 테스트 코드, 리팩토링 테스트 코드 추가
   * chore: 빌드 업무 수정, 패키지 매니저 수정
 
-```text
-[feat]: 로그인 페이지 추가
-[fix]: 로그인 버튼 클릭 시 에러 수정
-[docs]: README.md 수정
-[style]: 코드 포맷팅
-[refactor]: 로그인 페이지 컴포넌트 리팩토링
-[test]: 로그인 페이지 테스트 코드 추가
-[chore]: package.json 업데이트
+    ```text
+    [feat]: 로그인 페이지 추가
+    [fix]: 로그인 버튼 클릭 시 에러 수정
+    [docs]: README.md 수정
+    [style]: 코드 포맷팅
+    [refactor]: 로그인 페이지 컴포넌트 리팩토링
+    [test]: 로그인 페이지 테스트 코드 추가
+    [chore]: package.json 업데이트
+    ```
+</div>
+</details>
+
+<details>
+<summary>eslint, prettier 설정</summary>
+<div markdown="1">
+
+### eslint, prettier 설정
+* eslint: 'eslint:recommended', // ESLint의 추천 설정을 사용
+
+### ESLint 추천 설정 (eslint) 핵심 요약
+#### Possible Errors (가능한 오류 방지)
+* no-constant-condition: 조건문에서 항상 true 또는 false인 상수를 사용하지 않음
+* no-debugger: debugger 문 사용 금지
+* no-dupe-args: 함수 정의에서 중복된 인수 금지
+* no-dupe-keys: 객체 리터럴에서 중복된 키 금지
+* no-duplicate-case: switch 문에서 중복된 case 라벨 금지
+* no-empty: 빈 블록 문 금지
+* no-extra-semi: 불필요한 세미콜론 금지
+* no-func-assign: 함수 선언을 다시 할당하지 않음
+* no-irregular-whitespace: 비정상적인 공백 문자 금지
+* no-unreachable: 도달할 수 없는 코드 금지
+* use-isnan: NaN과 비교할 때 isNaN() 사용
+#### Best Practices (모범 사례)
+* eqeqeq: == 및 != 대신 === 및 !== 사용
+* no-multi-spaces: 여러 공백 문자 사용 금지
+* no-self-assign: 변수에 자신을 할당하지 않음
+* no-self-compare: 자신과의 비교 금지
+* no-useless-concat: 불필요한 문자열 연결 금지
+* no-useless-escape: 불필요한 이스케이프 문자 금지
+#### Variables (변수)
+* no-delete-var: 변수 삭제 금지
+* no-undef: 정의되지 않은 변수 사용 금지
+* no-unused-vars: 사용하지 않는 변수 금지
+#### Stylistic Issues (스타일 문제)
+* no-mixed-spaces-and-tabs: 공백과 탭 혼용 금지
+* semi: 문장 끝에 세미콜론 사용
+#### ECMAScript 6 (ES6)
+* no-class-assign: 클래스 선언을 다시 할당하지 않음
+* no-const-assign: const 선언 변수를 다시 할당하지 않음
+* no-dupe-class-members: 클래스 멤버의 중복 금지
+* no-new-symbol: Symbol을 생성자로 사용하지 않음
+* require-yield: 생성자 함수 내에 yield 사용
+
+### Prettier 설정
+```json
+{
+  "printWidth": 80,             // 코드 줄의 최대 길이를 설정합니다.
+  "tabWidth": 2,                // 들여쓰기에 사용할 공백 수를 설정합니다.
+  "useTabs": false,             // 탭 대신 공백을 사용합니다.
+  "semi": true,                 // 문장의 끝에 세미콜론을 추가합니다.
+  "singleQuote": false,         // 작은따옴표 대신 큰따옴표를 사용합니다.
+  "trailingComma": "es5",       // 여러 줄로 나열된 항목의 마지막에 쉼표를 ES5에서 유효한 위치에만 추가합니다.
+  "bracketSpacing": true,       // 객체 리터럴에서 중괄호에 공백을 추가합니다.
+  "jsxBracketSameLine": false,  // JSX 요소의 마지막 `>`를 다음 줄의 시작 부분에 배치합니다.
+  "arrowParens": "avoid",       // 화살표 함수의 매개변수에 괄호를 추가하지 않습니다.
+  "endOfLine": "auto"           // EOL(End Of Line)을 설정합니다.
+}
+
 ```
+</div>
+</details>
 
 
+---
+
+## 성능 개선
+
+
+## 트러블 슈팅
