@@ -22,10 +22,11 @@ import SigninPage from "@/pages/auth/SigninPage.tsx";
 import SigninSelectionPage from "@/pages/auth/SigninSelectionPage.tsx";
 import SignupFormPage from "@/pages/auth/SignupFormPage.tsx";
 import SignupSelectionPage from "@/pages/auth/SignupSelectionPage.tsx";
+import { RouteObject } from "react-router-dom";
 import HomePage from "./pages/commerce/HomePage.tsx";
 
 // noinspection JSXNamespaceValidation
-const routes = [
+const routes: RouteObject[] = [
   // PUBLIC
   {
     path: "/",
