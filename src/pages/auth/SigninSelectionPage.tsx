@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button.tsx';
+import { Button } from "@/components/ui/button.tsx";
 
 const SigninSelectionPage = () => {
   return (
@@ -10,6 +10,6 @@ const SigninSelectionPage = () => {
       <Button>구글 로그인</Button>
     </div>
   );
-}
+};
 
 export default SigninSelectionPage;

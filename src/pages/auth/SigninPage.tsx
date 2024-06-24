@@ -4,6 +4,6 @@ const SigninPage = () => {
       <h1>SigninPage</h1>
     </div>
   );
-}
+};
 
 export default SigninPage;

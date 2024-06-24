@@ -4,6 +4,6 @@ const OrderHistoryPage = () => {
       <h1>Order History</h1>
     </div>
   );
-}
+};
 
 export default OrderHistoryPage;

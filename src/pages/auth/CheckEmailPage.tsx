@@ -4,6 +4,6 @@ const CheckEmailPage = () => {
       <h1>Check Email Page</h1>
     </div>
   );
-}
+};
 
 export default CheckEmailPage;

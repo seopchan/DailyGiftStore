@@ -4,6 +4,6 @@ const UserInfoPage = () => {
       <h1>User Info Page</h1>
     </div>
   );
-}
+};
 
 export default UserInfoPage;

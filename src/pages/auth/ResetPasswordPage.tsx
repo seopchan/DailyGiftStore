@@ -4,6 +4,6 @@ const ResetPasswordPage = () => {
       <h1>Reset Password Page</h1>
     </div>
   );
-}
+};
 
 export default ResetPasswordPage;

@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const SellerLayout = (
-  { children }: { children?: React.ReactNode }
-) => {
+const SellerLayout = ({ children }: { children?: React.ReactNode }) => {
   return (
     <div>
       <h1>Seller Layout</h1>
       {children}
     </div>
   );
-}
+};
 
 export default SellerLayout;
