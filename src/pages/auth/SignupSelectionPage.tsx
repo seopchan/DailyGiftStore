@@ -14,9 +14,9 @@ const SignupSelectionPage = () => {
           // 네비게이션으로 이동
           navigate('/signup');
         }}
-      >이메일 로그인</Button>
+      >이메일로 회원가입</Button>
       {/* 구글 로그인 버튼 */}
-      <Button>구글 로그인</Button>
+      <Button>구글 회원가입</Button>
     </div>
   );
 }

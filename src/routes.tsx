@@ -1,3 +1,4 @@
+import AuthGuard from '@/components/authentication/AuthGuard.tsx';
 import OrderManagementPage from '@/pages/seller/OrderManagementPage.tsx';
 import ProductManagementPage from '@/pages/seller/ProductManagementPage.tsx';
 import ProductRegistrationPage from '@/pages/seller/ProductRegistrationPage.tsx';
@@ -18,12 +19,12 @@ import PasswordChangedPage from '@/pages/auth/PasswordChangedPage.tsx';
 import ProductDetailPage from '@/pages/commerce/ProductDetailPage.tsx';
 import ResetPasswordPage from '@/pages/auth/ResetPasswordPage.tsx';
 import SearchResultsPage from '@/pages/commerce/SearchResultsPage.tsx';
-import SigninPage from '@/pages/auth/SigninPage.tsx';
+import SignInPage from '@/pages/auth/SignInPage.tsx';
 import SigninSelectionPage from '@/pages/auth/SigninSelectionPage.tsx';
 import SignupFormPage from '@/pages/auth/SignupFormPage.tsx';
 import SignupSelectionPage from '@/pages/auth/SignupSelectionPage.tsx';
-import { RouteObject } from 'react-router-dom';
 import HomePage from "./pages/commerce/HomePage.tsx";
+import { RouteObject } from 'react-router-dom';
 
 // noinspection JSXNamespaceValidation
 const routes: RouteObject[] = [
@@ -50,7 +51,7 @@ const routes: RouteObject[] = [
       },
       {
         path: 'signin',
-        element: <SigninPage />,
+        element: <SignInPage />,
       },
       {
         path: 'forgot-password',
@@ -81,7 +82,7 @@ const routes: RouteObject[] = [
   // DASHBOARD
   {
     path: 'dashboard',
-    element: <DashboardLayout />,
+    element: <AuthGuard><DashboardLayout /></AuthGuard>,
     children: [
       {
         path: 'orders',
